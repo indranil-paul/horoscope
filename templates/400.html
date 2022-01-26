@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%block content%}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>Oops!</h1>
+                <h2>400 Bad Request</h2>
+                <div class="error-details">
+                    Sorry, an error has occured! Try after some time...
+                </div>
+                <br>
+                <div><i>{{err_msg}}</i></div>                    
+                <br>
+                <div class="error-actions">
+                    <a href="{{ url_for('scraper.home') }}" class="btn btn-primary btn-sm">Take Me Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock%}

@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="jumbotron text-center">
+    <h1 class="display-4">What's Your Rashi?</h1>
+    <br>
+    <div class="row">            
+        {% for zodiac_ele in zodiac %}
+        
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-3">
+                <a class="text-body zodiac_box_link" href="{{url_for('scraper.show_horoscope', _sign=zodiac_ele.name.lower(), _freq='today')}}" >
+                    <div class="card zodiac_box" data-toggle="tooltip" data-placement="bottom" title="{{zodiac_ele.name.capitalize()}}">
+                        <img class="zodiac_symbol_img" src="/static/images/zodiac_symbol/{{zodiac_ele.name.lower()}}.png"  style="height: 100px; width: 100px" title="{{zodiac_ele.name.capitalize()}}" alt="{{zodiac_ele.name.capitalize()}}">
+                        <div class="card-body">
+                            {{zodiac_ele.name.capitalize()}}
+                            <br>
+                            <small class="text-muted">{{zodiac_ele.date}}</small>
+                        </div>
+                    </div> 
+                </a>     
+            </div>
+        
+        {% endfor %}            
+    </div>
+</div>
+{%endblock%}

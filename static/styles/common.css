@@ -1,0 +1,32 @@
+.zodiac_sign_img {
+    clear: right;
+    width: 120px;
+    margin: -5px -5px 0 20px
+}
+
+.zodiac_box_link {
+    text-decoration: none;
+}
+
+.zodiac_box {
+    height: 100%; 
+    align-items: center;
+    padding-top: 10px;
+}
+
+.about_box {
+    padding:25px;
+    background-color: #fbfbfb;
+    border: 1px solid #d6d6d6;
+}
+
+.zodiac_font {
+    font-family:Garamond,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 1.15rem;
+}
+
+.zodiac_home_link {
+    text-align: -webkit-right;
+    align-self: flex-end;
+}
